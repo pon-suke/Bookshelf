@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:bookshelf/View/SelectBookshelfView.dart';
+import 'package:bookshelf/View/select_bookshelf_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -99,10 +99,13 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             TextButton(
               child: const Text("SelectBookShelfに遷移"),
-              onPressed: (){
-                Navigator.push(context, MaterialPageRoute(
-                  builder: (context) => SelectBookshelfView()));
-              },),
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const SelectBookshelfView()));
+              },
+            ),
             const Text(
               'You have pushed the button this many times:',
             ),
