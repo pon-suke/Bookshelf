@@ -32,20 +32,27 @@ class BookshelfView extends StatelessWidget {
   }
 
   Widget _books(String label, Size size) {
-    return Image.asset('images/cover.jpg');
-
     // return Container(
-    //   width: size.width * 0.1,
-    //   height: size.width * 0.1,
-    //   decoration:
-    //       BoxDecoration(color: Colors.white, border: Border.all(width: 1)),
-    //   child: FittedBox(
-    //     fit: BoxFit.contain,
-    //     child: Image.asset(
-    //       'assets/images/cover.jpg',
-    //     ),
-    //   ),
+    //   width: 100,
+    //   child: Image.asset('images/cover.jpg'),
     // );
+
+    return Container(
+      width: size.width * 0.25,
+      decoration:
+          BoxDecoration(color: Colors.white, border: Border.all(width: 1)),
+      child: Column(
+        children: [
+          FittedBox(
+            fit: BoxFit.contain,
+            child: Image.asset(
+              'images/cover.jpg',
+            ),
+          ),
+          Text(label),
+        ],
+      ),
+    );
 
     // return TextButton(
     //   style: TextButton.styleFrom(
