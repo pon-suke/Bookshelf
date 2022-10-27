@@ -98,7 +98,7 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             TextButton(
-              child: Text("SelectBookShelfに遷移"),
+              child: const Text("SelectBookShelfに遷移"),
               onPressed: (){
                 Navigator.push(context, MaterialPageRoute(
                   builder: (context) => SelectBookshelfView()));

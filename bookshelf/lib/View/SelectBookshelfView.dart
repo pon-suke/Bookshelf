@@ -5,11 +5,11 @@ class SelectBookshelfView extends StatelessWidget{
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title : Text("SelectBookShelfView")
+        title : const Text("SelectBookShelfView")
       ),
       body : Center(
         child: TextButton(
-          child: Text("mainに戻る"),
+          child: const Text("mainに戻る"),
           onPressed: (){
             Navigator.pop(context);
           },
