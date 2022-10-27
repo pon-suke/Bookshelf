@@ -19,11 +19,16 @@ class BookshelfView extends StatelessWidget {
           //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
             for (int i = 0; i < 2; i++)
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: <Widget>[
-                  for (int j = 0; j < 3; j++) _books("本のタイトル", size),
-                ],
+              Container(
+                margin: const EdgeInsets.fromLTRB(0, 0, 0, 7),
+                decoration: BoxDecoration(
+                    color: Colors.white, border: Border.all(width: 1)),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: <Widget>[
+                    for (int j = 0; j < 3; j++) _books("本のタイトル", size),
+                  ],
+                ),
               ),
           ],
         ),
