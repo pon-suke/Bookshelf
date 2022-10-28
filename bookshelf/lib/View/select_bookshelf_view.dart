@@ -5,8 +5,6 @@ class SelectBookshelfView extends StatelessWidget {
   const SelectBookshelfView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    var size = MediaQuery.of(context).size;
-
     return Scaffold(
       appBar: AppBar(title: const Text("本棚の選択")),
       body: Container(
@@ -18,16 +16,17 @@ class SelectBookshelfView extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
-            _bookshlefButton("本", size, context),
-            _bookshlefButton("アニメ", size, context),
-            _bookshlefButton("ゲーム", size, context),
+            _bookshlefButton("本", context),
+            _bookshlefButton("アニメ", context),
+            _bookshlefButton("ゲーム", context),
           ],
         ),
       ),
     );
   }
 
-  Widget _bookshlefButton(String label, Size size, BuildContext context) {
+  Widget _bookshlefButton(String label, BuildContext context) {
+    var size = MediaQuery.of(context).size;
     return TextButton(
       style: TextButton.styleFrom(
         fixedSize: Size(
